@@ -1,8 +1,12 @@
 def pamato_skaiciavimas():
     beginis_metras = input('Iveskite beginiu metru kieki: ')
     pamato_kaina = input('Iveskite metro kaina ')
-    kaina = int(beginis_metras) * int(pamato_kaina)
-    print(f'Pamato kaina yra: {kaina}')
+    try:
+        kaina = int(beginis_metras) * int(pamato_kaina)
+        print(f'Pamato kaina yra: {kaina}')
+    except Exception as e:
+        print('Turetu buti skaiciai o ne raides')
+   
 
 def murinijimo_skaiciavimas():
     perimetro_ilgis = input('Iveskite perimetro ilgi: ')
@@ -33,10 +37,12 @@ def dazymo_skaiciavimas():
     print(f'Dazymo kaina yra: {kaina}')
 
 def darbo_tipas():
-    pamatas = pamato_skaiciavimas
-    muras = murinijimo_skaiciavimas
-    stogas = stogo_skaiciavimas
-    tinkas = stogo_skaiciavimas
-    dazymas = dazymo_skaiciavimas
-    print(f'Pasirinkite viena is siu darbu: pamatas, murijimas, stogas, tinkavimas, dazymas: {pamatas}, {muras}, {stogas}, {tinkas}, {dazymas}')
+    galimi_pasirinkimai = ['pamatas', 'murijimas', 'stogas', 'tinkavimas', 'dazymas']
+    pasirinktas_darbas = input('Pasirinkite viena is siu darbu: pamatas, murijimas, stogas, tinkavimas, dazymas')
+    if pasirinktas_darbas in galimi_pasirinkimai:
+        if pasirinktas_darbas == 'pamatas':
+            pamato_skaiciavimas()
+    else:
+        print('Pasirinkite is', galimi_pasirinkimai)
+
 darbo_tipas()
