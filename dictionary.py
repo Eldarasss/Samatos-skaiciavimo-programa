@@ -1,6 +1,3 @@
-"""
-darbo_tipas = input('Pasirinkite viena is siu darbu: pamatas, murijimas, stogas, tinkavimas, dazymas: ')
-"""
 def pamato_skaiciavimas():
     beginis_metras = input('Iveskite beginiu metru kieki: ')
     pamato_kaina = input('Iveskite metro kaina ')
@@ -42,3 +39,4 @@ def darbo_tipas():
     tinkas = stogo_skaiciavimas
     dazymas = dazymo_skaiciavimas
     print(f'Pasirinkite viena is siu darbu: pamatas, murijimas, stogas, tinkavimas, dazymas: {pamatas}, {muras}, {stogas}, {tinkas}, {dazymas}')
+darbo_tipas()
