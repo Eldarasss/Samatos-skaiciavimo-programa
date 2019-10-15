@@ -42,4 +42,3 @@ def darbo_tipas():
     tinkas = stogo_skaiciavimas
     dazymas = dazymo_skaiciavimas
     print(f'Pasirinkite viena is siu darbu: pamatas, murijimas, stogas, tinkavimas, dazymas: {pamatas}, {muras}, {stogas}, {tinkas}, {dazymas}')
-darbo_tipas()
